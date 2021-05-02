@@ -11,6 +11,14 @@
   margin: 0 auto;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  list-style: none;
+}
+
 .header .header_top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,24 +90,147 @@
   background-image: linear-gradient(to bottom, #f9f9f9, #f5f5f5);
 }
 
-.header .header_top .header_top_left .top_search_form .button_browse .button_browse_link {
+.header .header_top .header_top_left .top_search_form .button_browse details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
 }
 
-.header .header_top .header_top_left .top_search_form .button_browse .button_browse_link .button_browse_text {
+.header .header_top .header_top_left .top_search_form .button_browse details summary {
   font-family: 'lato';
   font-size: 14px;
   letter-spacing: 0.35px;
   color: #838383;
-  padding: 9px 0 10px 14px;
+  padding: 9px 0 10px 15px;
 }
 
-.header .header_top .header_top_left .top_search_form .button_browse .button_browse_link .fa-caret-down {
-  padding: 12px 8px 11px 8px;
+.header .header_top .header_top_left .top_search_form .button_browse details summary span {
+  padding: 0 10px;
   color: #838383;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] summary span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div {
+  position: absolute;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  padding: 10px 15px 10px 15px;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_top .h3 {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.35px;
+  color: #232323;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_top li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_top li a {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.35px;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_top li:nth-child(2) {
+  padding-top: 10px;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_bottom {
+  list-style-type: none;
+  padding: 0 15px 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  padding: 10px 15px 10px 15px;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_bottom .h3 {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.35px;
+  color: #232323;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0;
+  padding-right: 180px;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_bottom li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_bottom li a {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.35px;
+}
+
+.header .header_top .header_top_left .top_search_form .button_browse details[open] div .list_bottom li:nth-child(2) {
+  padding-top: 10px;
 }
 
 .header .header_top .header_top_left input {
@@ -119,13 +250,17 @@
   border: solid 1px #e6e6e6;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f5f5f5));
   background-image: linear-gradient(to bottom, #f9f9f9, #f5f5f5);
-  padding: 10px 10px 9px 10px;
   font-size: 14px;
 }
 
-.header .header_top .header_top_left .button_search .button_browse_link {
+.header .header_top .header_top_left .button_search a {
+  padding: 10px 10px 9px 10px;
   color: #a4a4a4;
   text-decoration: none;
+}
+
+.header .header_top .header_top_left .button_search a span {
+  padding: 12px 0px 10px 0px;
 }
 
 .header .header_top .header_top_right {
@@ -176,6 +311,10 @@
   border-top: 1px solid #e6e6e6;
 }
 
+.header .header_list {
+  padding: 0 240px;
+}
+
 .header .header_list ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,17 +323,15 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 15px 155px 19px 240px;
 }
 
-.header .header_list ul li,
-.header .header_list ul a,
-.header .header_list ul p {
+.header .header_list ul li a {
+  display: block;
   font-weight: bold;
-  list-style-type: none;
   text-decoration: none;
   font-size: 14px;
   color: #222222;
+  padding: 20px 15px;
 }
 
 .landing_box {
@@ -214,7 +351,7 @@
 
 .landing_box .landing_content .landing_rectangle {
   width: 12px;
-  height: 92px;
+  height: 115px;
   background-color: #f16d7f;
   margin: 226px 12px 0 0;
 }
