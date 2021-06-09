@@ -6,22 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script  src="script.js"></script>
-    <script>
-    // т.к. знал чуток больше чем было запрошено в д.з. сделал схемку посложнее:
-    let Tc = +prompt('Введите температуру в "Цельсиях":'),
-        Tf = ((9 / 5) * Tc + 32);
-    if (isNaN(Tc)) {
-        alert('Вы ввели не число!')
-    } else {
-        alert('Ваша температура в "Фаренгейтах": \n' + Tf);
-    }
-    </script>
 </head>
 <body>
-    <script>
-        let admin = 'Василий',
-            name = admin;
-    console.log(name + '\n\n Выражение 1000 + "108" == 1000108 - Потому-что "108" является не числом(надеюсь правильно обьяснил...)'+'\n\n async - Загружается в фоновом режиме как только к нему доходит очередь(при этом 2 скрипта с разным размером но оба с атрибутом async начнут загружатся вместе но начнут свое выполнение по готовности, не смотря на их располажение в файле), при этом он должен независеть от остальных скриптов и от структуры сайта' + '\n\n defer - Атрибут сообщает браузеру что он должен продолжать загрузку страницы, но скрипт загружать в фоноом режиме и запустить его как только загрузится страница целиком. Скрипты с defer никогда не блокируют страницу.')
+    <script> // Задание n.1
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2 - Префиксный инкремент - а + 1 после чего выводим на экран.
+        d = b++; alert(d);           // 1 - Постфиксный инкремеент - выводим на экран, после чего b + 1
+        c = (2+ ++a); alert(c);      // 5 - Т.к. а уже равно 2 добавляем к нему 1 и делаем сложение, в итоге с равно 5
+        d = (2+ b++); alert(d);      // 4 - Т.к. b уже равно 2 суммируем его с 2 и выводим на экран, после чего добавляем 1. В итоге равно 4 при выводе на экран.
+        alert(a);                    // 3 - a=1; c=++a; в итоге а=2; c = (2+ ++a); после чего а будет равнятся 3. Получаем а = 3.
+        alert(b);                    // 3 - b=1; d=b++; в итоге b=2; d = (2+ b++); после чего b будет равнятся 3. Итог b = 3.
     </script>
+    <script> // Задание n.2
+        var a = 2;
+        var x = 1 + (a *= 2); // x = 5 так как: a=2; x = 1+(a = a * 2) = 1+4 = 5
+    </script>
+    <script> // Задание n.3
+        var a = +prompt('Введите ПЕРВОЕ отрицательное или положительное число:');
+        var b = +prompt('Введите ВТОРОЕ отрицательное или положительное число:');
+        if(!isNaN(a) && !isNaN(b)){
+            if(a >= 0 && b >= 0)
+                alert('a - b =' + (a - b));
+            else if(a < 0 && b < 0)
+                alert('a * b =' + (a * b));
+            else
+                alert('a + b =' + (a + b));
+            }
+        else
+            alert('Вы ввели не число!')
+    </script>
+    <script> // Задание n.4
+                a = +prompt('Введите число от 0 до 15:');
+        if(!isNaN(a) && (a >= 0 && a <= 15)){
+            switch (a){
+                case 0:
+                    console.log(a++);
+                case 1:
+                    console.log(a++);
+                case 2:
+                    console.log(a++);
+                case 3:
+                    console.log(a++);
+                case 4:
+                    console.log(a++);
+                case 5:
+                    console.log(a++);
+                case 6:
+                    console.log(a++);
+                case 7:
+                    console.log(a++);
+                case 8:
+                    console.log(a++);
+                case 9:
+                    console.log(a++);
+                case 10:
+                    console.log(a++);
+                case 11:
+                    console.log(a++);
+                case 12:
+                    console.log(a++);
+                case 13:
+                    console.log(a++);
+                case 14:
+                    console.log(a++);
+                case 15:
+                    console.log(a++);
+                }
+        }
+        else
+            alert('Вы ввели не число');
+    </script>
+    <script> // Задание n.5
+                function add(a, b){
+            return a + b;
+        }
+        function subtract(a, b){
+            return a - b;
+        }
+        function multiply(a, b){
+            return a * b;
+        }
+        function divide(a, b){
+            return a / b;
+        }
+    </script>
+    <script> // Задание n.6
+        function mathOperation(arg1, arg2, operation){
+            switch (operation) {
+                case "+":
+                    return arg1 + " + " + arg2 + " = " + add(arg1, arg2);
+                case "-":
+                    return arg1 + " - " + arg2 + " = " + subtract(arg1, arg2);
+                case "*":
+                    return arg1 + " * " + arg2 + " = " + multiply(arg1, arg2);
+                case "/":
+                    return arg1 + " / " + arg2 + " = " + divide(arg1, arg2);
+                default:
+                    return operation + " - Неизвестная операция!";
+                }
+        }
+
+        let a = +prompt('Введите число #1'),
+            op = prompt('Введите нужную вам операцию: \n+ - сложить \n- - вычесть \n* - умножить \n/ - разделить'),
+            b = +prompt('Введите число #2');
+                alert(mathOperation(a,b,op));
+</script>
 </body>
 </html>

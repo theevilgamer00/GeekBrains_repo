@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        function add(a, b){
+            return a + b;
+        }
+        function subtract(a, b){
+            return a - b;
+        }
+        function multiply(a, b){
+            return a * b;
+        }
+        function divide(a, b){
+            return a / b;
+        }
+
+        function mathOperation(arg1, arg2, operation){
+            switch (operation) {
+                case "+":
+                    return arg1 + " + " + arg2 + " = " + add(arg1, arg2);
+                case "-":
+                    return arg1 + " - " + arg2 + " = " + subtract(arg1, arg2);
+                case "*":
+                    return arg1 + " * " + arg2 + " = " + multiply(arg1, arg2);
+                case "/":
+                    return arg1 + " / " + arg2 + " = " + divide(arg1, arg2);
+                default:
+                    return operation + " - Неизвестная операция!";
+                }
+        }
+
+        let a = +prompt('Введите число #1'),
+            op = prompt('Введите нужную вам операцию: \n+ - сложить \n- - вычесть \n* - умножить \n/ - разделить'),
+            b = +prompt('Введите число #2');
+                alert(mathOperation(a,b,op));
+    </script>
+</body>
+</html>

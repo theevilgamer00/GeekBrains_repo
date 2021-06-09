@@ -1,0 +1,45 @@
+<!--
+<script>
+    var day = +prompt('Введите номер дня недели:');
+    if(day > 0 && day < 6) {
+        alert('Будний день!');
+    }else if(day == 6 || day == 7) {
+        alert('Выходной день!');
+    }else{
+        alert('День введен некорректно!')
+    }
+</script> 
+
+<script>
+    var x = 10, check = true;
+
+    if(x >= 10){
+        x++;
+        if(x < 15){
+            if(true){
+                if(!check){
+                    x = 20;
+                }else{
+                    if(10){
+                        x = 1;
+                    }
+                }
+                if(""){
+                    x = 0;
+                }
+                x++;
+            }
+        }
+    }
+    alert(x++);
+</script> -->
+<script>
+    var price = +prompt('Введите стоимость покупки:');
+    if(price >= 500 && price < 1000){
+        price = price - price * 0.05;
+    }else if(price >= 1000){
+        price = price - price * 0.1;
+    }
+    
+    alert(price)
+</script>

@@ -1,0 +1,40 @@
+<!--
+<script>
+    var outer = 10;
+
+    function sum(a=0,b=0){
+        outer = 5;
+        var res = a + b + outer;
+        alert(res)
+    }
+
+    sum(5)
+    alert(outer)
+</script>
+
+<script>  
+    function sum(a=0,b=0){
+        var res = a + b;
+        alert(res);
+        return res;
+    } //Оператор return - немедленно завершает работу и присваивает ей значение
+
+    var s = sum(1,2)
+    var a = s * 2;
+    alert(a);
+</script>
+-->
+<script>
+    function calc(a,b){
+        if(isEven(a) && isEven(b)){
+            return a + b;
+        }
+        return a * b;
+    }
+
+    function isEven(n){
+        return n % 2 == 0;
+    }
+
+    alert(calc(2,5))
+</script>
