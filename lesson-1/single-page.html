@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAND | Main</title>
+    <title>BRAND | Single Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style-single-page.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="FontAwesome/css/all.css">
 </head>
@@ -18,7 +21,7 @@
 
             <div class="header_top">
                 <div class="header__left">
-                    <a href="#">
+                    <a href="index.html">
                         <div class="header__logo">
                             <img src="img/logo.svg" alt="logo">
                             <p class="brand">BRAN<span>D</span></p>
@@ -91,7 +94,7 @@
                                             <img src="img/cart-item-2.png" alt="">
                                         </div>
                                         <div class="item_title">
-                                            <a href="single-page.html">Rebox Zane</a>
+                                            <a href="#">Rebox Zane</a>
                                             <img src="img/stars.png" alt="">
                                             <p>1 x $250</p>
                                         </div>
@@ -434,84 +437,119 @@
             </div>
         </nav>
 
-        <div class="header_banner">
-            <div class="center banner__container">
-                <div class="banner__content">
-                    <div class="vertical__bar"></div>
-                    <p class="banner__text">
-                        <span class="the_brand">THE BRAND</span><br>OF LUXERIOUS <span class="fashion">FASHION</span>
-                    </p>
-                </div>
+        <div class="page-name">
+            <div class="center page-name__center">
+                <h4 class="page-name__heading">new arrivals</h4>
+                <nav>
+                    <ul class="page-name__ul">
+                        <li class="page-name__li"><a class="page-name__link" href="index.html">Home</a></li>
+                        <li class="page-name__li"><a class="page-name__link" href="#">Women</a></li>
+                        <li class="page-name__li"><a class="page-name__link" href="#">New Arrivals</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-
     </header>
 
     <main>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="img/single-page-carusel.png" class="d-block" alt="">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+
+        <div class="product-description center">
+            <h4 class="collection-heading">WOMEN COLLECTION</h4>
+            <span class="for-border"></span>
+            <h2 class="product-item">Moschino Cheap And Chic</h2>
+            <p class="product-text">
+                Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate
+                collaborative
+                architectures before cutting-edge services. Completely visualize parallel core competencies rather than
+                exceptional
+                portals.
+            </p>
+            <div class="product-material-design">
+                <p class="product-material"><span>MATERIAL:</span> COTTON</p>
+                <p class="product-design"><span>DESIGNER:</span> BINBURHAN</p>
+            </div>
+            <p class="product-price">$561</p>
+            <hr class="product-hr">
+            <div class="filter__block">
+                <div class="filter">
+                    <h3 class="filter__heading">choose color</h3>
+
+                    <details class="filter__menu">
+                        <summary class="filter__option">
+                            <span class="filter__text">
+                                Red
+                                <i class="fas fa-angle-left"></i>
+                            </span>
+                        </summary>
+                        <div class="filter__color">
+                            <span class="filter__color__block">Green</span>
+                            <span class="filter__color__block">Blue</span>
+                            <span class="filter__color__block">Grey</span>
+                        </div>
+                    </details>
+                </div>
+                <div class="filter">
+                    <h3 class="filter__heading">choose size</h3>
+                    <select name="size">
+                        <option class="filter__value" value="s">S</option>
+                        <option class="filter__value" value="m">M</option>
+                        <option class="filter__value" value="l">L</option>
+                        <option class="filter__value" value="xl">XL</option>
+                        <option selected class="filter__value" value="xxl">XXL</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <h3 class="filter__heading">quantity</h3>
+                    <select name="quantity">
+                        <option class="filter__value" value="1">1</option>
+                        <option selected class="filter__value" value="2">2</option>
+                        <option class="filter__value" value="3">3</option>
+                        <option class="filter__value" value="4">4</option>
+                        <option class="filter__value" value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <a class="product-add" href="#">
+                <div class="product-cart-button">
+                    <svg id="SVGDoc" width="26" height="24" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/"
+                        viewBox="0 0 26 24">
+                        <path
+                            d="M-0.00025,0.97751c0,-0.53791 0.43278,-0.97808 0.96169,-0.97808h3.47824c0.43278,0 0.81739,0.29344 0.92964,0.71768l3.92685,14.44501h10.707l3.55825,-8.31495h-11.86094c-0.529,0 -0.96178,-0.44016 -0.96178,-0.97828c0,-0.53791 0.43278,-0.97808 0.96178,-0.97808h13.33542c0.32063,0 0.62523,0.16305 0.80147,0.44016c0.17633,0.27712 0.20838,0.61954 0.0802,0.9295l-4.39186,10.27131c-0.16022,0.35894 -0.49677,0.58709 -0.88148,0.58709h-12.06932c-0.43287,0 -0.81749,-0.29344 -0.92964,-0.71728l-3.92694,-14.44561h-2.75688c-0.52891,0 -0.96169,-0.43997 -0.96169,-0.97848zM5.48137,21.78192c0,-1.22255 0.97771,-2.21735 2.17991,-2.21735c1.20211,0 2.17981,0.995 2.17981,2.21735c0,1.22275 -0.97771,2.21755 -2.17981,2.21755c-1.2022,0 -2.17991,-0.9948 -2.17991,-2.21755zM19.12149,21.92884c-0.08001,-1.20662 0.81758,-2.28265 2.01969,-2.36427c1.2022,-0.08162 2.2439,0.84788 2.3241,2.0545c0.03204,0.60301 -0.14429,1.17417 -0.529,1.61414c-0.38462,0.45649 -0.91352,0.71748 -1.49069,0.76626c-0.04807,0 -0.11206,0 -0.16012,0c-1.13802,0 -2.08368,-0.91318 -2.16398,-2.07063z"
+                            fill-opacity="1"></path>
+                    </svg>
+                    <p class="product-cart-text">Add to Cart</p>
+                </div>
+            </a>
+        </div>
 
         <div class="center">
 
-            <section class="four_banners">
-                <div class="left__banners">
-
-                    <a href="#">
-                        <div class="for__man">
-                            <div class="white__block">
-                                <div class="black-red__text">
-                                    <p class="black__text">Hot deal</p>
-                                    <p class="red__text">For man</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="accesories">
-                            <div class="white__block">
-                                <div class="black-red__text">
-                                    <p class="black__text">Luxerious & trendy</p>
-                                    <p class="red__text">Accesories</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="right__banners">
-
-                    <a href="#">
-                        <div class="offer__women">
-                            <div class="white__block">
-                                <div class="black-red__text">
-                                    <p class="black__text">30% offer</p>
-                                    <p class="red__text">Women</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="new__arrivals">
-                            <div class="white__block">
-                                <div class="black-red__text">
-                                    <p class="black__text">New arrivals</p>
-                                    <p class="red__text">For kids</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-            </section>
             <section class="featured_items">
-                <h4 class="items_heading">Fetured Items</h4>
-                <p class="items_text">Shop for items based on what we featured in this week</p>
+                <h4 class="items_heading">YOU MAY LIKE ALSO</h4>
 
                 <div class="card_box">
                     <div class="card card__1">
 
                         <div class="card__top view">
-                            <img src="img/card-1.png" alt="card-1">
+                            <img class="card-1-img" src="img/blaze.png" alt="card-1">
                             <div class="mask">
                                 <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
                             </div>
@@ -519,7 +557,7 @@
                         <div class="card__bottom">
                             <a href="#">
                                 <p class="card__title">
-                                    Mango People T-shirt
+                                    BLAZE LEGGINGS
                                 </p>
                                 <p class="card__price">$52.00</p>
                             </a>
@@ -529,7 +567,7 @@
                     <div class="card card__2">
 
                         <div class="card__top view">
-                            <img src="img/card-2.png" alt="card-2">
+                            <img class="card-2-img" src="img/sweater.png" alt="card-2">
                             <div class="mask">
                                 <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
                             </div>
@@ -537,7 +575,7 @@
                         <div class="card__bottom">
                             <a href="#">
                                 <p class="card__title">
-                                    Mango People T-shirt
+                                    ALEXA SWEATER
                                 </p>
                                 <p class="card__price">$52.00</p>
                             </a>
@@ -547,7 +585,7 @@
                     <div class="card card__3">
 
                         <div class="card__top view">
-                            <img src="img/card-3.png" alt="card-3">
+                            <img class="card-3-img" src="img/top.png" alt="card-3">
                             <div class="mask">
                                 <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
                             </div>
@@ -555,7 +593,7 @@
                         <div class="card__bottom">
                             <a href="#">
                                 <p class="card__title">
-                                    Mango People T-shirt
+                                    AGNES TOP
                                 </p>
                                 <p class="card__price">$52.00</p>
                             </a>
@@ -565,7 +603,7 @@
                     <div class="card card__4">
 
                         <div class="card__top view">
-                            <img src="img/card-4.png" alt="card-4">
+                            <img src="img/sylva.png" alt="card-4">
                             <div class="mask">
                                 <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
                             </div>
@@ -573,79 +611,7 @@
                         <div class="card__bottom">
                             <a href="#">
                                 <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__5">
-
-                        <div class="card__top view">
-                            <img src="img/card-5.png" alt="card-5">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__6">
-
-                        <div class="card__top view">
-                            <img src="img/card-6.png" alt="card-6">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__7">
-
-                        <div class="card__top view">
-                            <img src="img/card-7.png" alt="card-7">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__8">
-
-                        <div class="card__top view">
-                            <img src="img/card-8.png" alt="card-8">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
+                                    SYLVA SWEATER
                                 </p>
                                 <p class="card__price">$52.00</p>
                             </a>
@@ -653,68 +619,6 @@
 
                     </div>
                 </div>
-            </section>
-
-            <a href="#" class="product__button">
-                Browse All Product<i class="fas fa-long-arrow-alt-right"></i>
-            </a>
-
-            <section class="bottom_banner">
-
-                <div class="left__bottom_banner">
-
-                    <img src="img/bottom-banner-filter.png" alt="">
-                    <p class="bottom__banner_text">
-                        <span class="the_offer">30%<span>OFFER</span></span>
-                        <br>
-                        <span class="for_women">FOR WOMEN</span>
-                    </p>
-
-                </div>
-
-                <div class="right__bottom_banner">
-
-                    <div class="advantages_logo">
-
-                        <img src="img/delivery.svg" alt="">
-                        <img src="img/sales.svg" alt="">
-                        <img src="img/quality.svg" alt="">
-
-                    </div>
-
-                    <article class="offer_advantages">
-
-                        <div>
-
-                            <h4>Free Delivery</h4>
-                            <p>
-                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                                extensive
-                                models.
-                            </p>
-
-                        </div>
-                        <div>
-                            <h4>Sales & discounts</h4>
-                            <p>
-                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                                extensive
-                                models.
-                            </p>
-                        </div>
-                        <div>
-                            <h4>Quality assurance</h4>
-                            <p>
-                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                                extensive
-                                models.
-                            </p>
-                        </div>
-
-                    </article>
-
-                </div>
-
             </section>
 
         </div>
@@ -954,7 +858,6 @@
         </section>
 
     </footer>
-
 </body>
 
 </html>

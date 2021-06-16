@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAND | Main</title>
+    <title>BRAND | Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/checkout-style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="FontAwesome/css/all.css">
 </head>
@@ -18,7 +21,7 @@
 
             <div class="header_top">
                 <div class="header__left">
-                    <a href="#">
+                    <a href="index.html">
                         <div class="header__logo">
                             <img src="img/logo.svg" alt="logo">
                             <p class="brand">BRAN<span>D</span></p>
@@ -104,7 +107,7 @@
                                     <p>Total</p>
                                     <p>$500.00</p>
                                 </div>
-                                <a href="checkout.html" class="checkout">checkout</a>
+                                <a href="#" class="checkout">checkout</a>
                                 <a href="shopping-cart.html" class="go-to-cart">go to cart</a>
                             </div>
                         </div>
@@ -434,289 +437,130 @@
             </div>
         </nav>
 
-        <div class="header_banner">
-            <div class="center banner__container">
-                <div class="banner__content">
-                    <div class="vertical__bar"></div>
-                    <p class="banner__text">
-                        <span class="the_brand">THE BRAND</span><br>OF LUXERIOUS <span class="fashion">FASHION</span>
-                    </p>
-                </div>
+        <div class="page-name">
+            <div class="center page-name__center">
+                <h4 class="page-name__heading">new arrivals</h4>
+                <nav>
+                    <ul class="page-name__ul">
+                        <li class="page-name__li"><a class="page-name__link" href="index.html">Home</a></li>
+                        <li class="page-name__li"><a class="page-name__link" href="#">Women</a></li>
+                        <li class="page-name__li"><a class="page-name__link" href="#">New Arrivals</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-
     </header>
 
     <main>
 
         <div class="center">
-
-            <section class="four_banners">
-                <div class="left__banners">
-
-                    <a href="#">
-                        <div class="for__man">
-                            <div class="white__block">
-                                <div class="black-red__text">
-                                    <p class="black__text">Hot deal</p>
-                                    <p class="red__text">For man</p>
+            <div class="checkout__box">
+                <details>
+                    <summary class="checkout__head">01. Shipping Address</summary>
+                    <div class="checkout__content">
+                        <div class="checkout__left">
+                            <div class="checkout__reg">
+                                <h3 class="checkout__heading">Check as a guest or register</h3>
+                                <p class="checkout__text">Register with us for future convenience</p>
+                                <div class="checkout__input">
+                                    <div class="checkout__register">
+                                        <input id="ch1" type="radio" name="register__type">
+                                        <label for="ch1" class="checkout__subtitle">checkout as guest</label>
+                                    </div>
+                                    <div class="checkout__register">
+                                        <input id="ch2" checked type="radio" name="register__type">
+                                        <label for="ch2" class="checkout__subtitle">register</label>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="accesories">
-                            <div class="white__block">
-                                <div class="black-red__text">
-                                    <p class="black__text">Luxerious & trendy</p>
-                                    <p class="red__text">Accesories</p>
+                                <h3 class="checkout__heading">register and save time!</h3>
+                                <p class="checkout__text">Register with us for future convenience</p>
+                                <div class="checkout__recomend">
+                                    <a href="#">
+                                        <i class="fas fa-angle-double-right"></i>
+                                        <p class="checkout__text">Fast and easy checkout</p>
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="right__banners">
-
-                    <a href="#">
-                        <div class="offer__women">
-                            <div class="white__block">
-                                <div class="black-red__text">
-                                    <p class="black__text">30% offer</p>
-                                    <p class="red__text">Women</p>
+                                <div class="checkout__recomend">
+                                    <a href="#">
+                                        <i class="fas fa-angle-double-right"></i>
+                                        <p class="checkout__text">Easy access to your order history and status</p>
+                                    </a>
                                 </div>
+                                <button class="checkout__btn" type="submit">Continue</button>
                             </div>
                         </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="new__arrivals">
-                            <div class="white__block">
-                                <div class="black-red__text">
-                                    <p class="black__text">New arrivals</p>
-                                    <p class="red__text">For kids</p>
+                        <div class="checkout__right">
+                            <h3 class="checkout__heading">Already registered?</h3>
+                            <p class="checkout__text">Please log in below</p>
+                            <form class="checkout__signup" action="#">
+                                <div class="checkout__data">
+                                    <p class="checkout__subtitle">EMAIL ADDRESS</p>
+                                    <input class="checkout__input__area" type="text" name="username">
                                 </div>
-                            </div>
+                                <div class="checkout__data">
+                                    <p class="checkout__subtitle">PASSWORD</p>
+                                    <input class="checkout__input__area" type="password" name="userpass">
+                                </div>
+                                <p class="checkout__alert">* Required Fields</p>
+                                <div class="checkout__login">
+                                    <button class="checkout__btn" type="submit">Log in</button>
+                                    <a class="checkout__help" href="#">Forgot Password?</a>
+                                </div>
+                            </form>
                         </div>
-                    </a>
-
-                </div>
-            </section>
-            <section class="featured_items">
-                <h4 class="items_heading">Fetured Items</h4>
-                <p class="items_text">Shop for items based on what we featured in this week</p>
-
-                <div class="card_box">
-                    <div class="card card__1">
-
-                        <div class="card__top view">
-                            <img src="img/card-1.png" alt="card-1">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
                     </div>
-                    <div class="card card__2">
-
-                        <div class="card__top view">
-                            <img src="img/card-2.png" alt="card-2">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__3">
-
-                        <div class="card__top view">
-                            <img src="img/card-3.png" alt="card-3">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__4">
-
-                        <div class="card__top view">
-                            <img src="img/card-4.png" alt="card-4">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__5">
-
-                        <div class="card__top view">
-                            <img src="img/card-5.png" alt="card-5">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__6">
-
-                        <div class="card__top view">
-                            <img src="img/card-6.png" alt="card-6">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__7">
-
-                        <div class="card__top view">
-                            <img src="img/card-7.png" alt="card-7">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card card__8">
-
-                        <div class="card__top view">
-                            <img src="img/card-8.png" alt="card-8">
-                            <div class="mask">
-                                <a href="#"><img src="img/cart-white.svg" alt=""><span>Add to Cart</span></a>
-                            </div>
-                        </div>
-                        <div class="card__bottom">
-                            <a href="#">
-                                <p class="card__title">
-                                    Mango People T-shirt
-                                </p>
-                                <p class="card__price">$52.00</p>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <a href="#" class="product__button">
-                Browse All Product<i class="fas fa-long-arrow-alt-right"></i>
-            </a>
-
-            <section class="bottom_banner">
-
-                <div class="left__bottom_banner">
-
-                    <img src="img/bottom-banner-filter.png" alt="">
-                    <p class="bottom__banner_text">
-                        <span class="the_offer">30%<span>OFFER</span></span>
-                        <br>
-                        <span class="for_women">FOR WOMEN</span>
-                    </p>
-
-                </div>
-
-                <div class="right__bottom_banner">
-
-                    <div class="advantages_logo">
-
-                        <img src="img/delivery.svg" alt="">
-                        <img src="img/sales.svg" alt="">
-                        <img src="img/quality.svg" alt="">
-
-                    </div>
-
-                    <article class="offer_advantages">
-
-                        <div>
-
-                            <h4>Free Delivery</h4>
-                            <p>
-                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                                extensive
-                                models.
-                            </p>
-
-                        </div>
-                        <div>
-                            <h4>Sales & discounts</h4>
-                            <p>
-                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                                extensive
-                                models.
+                </details>
+                <details>
+                    <summary class="checkout__head">02. BILLING INFORMATION</summary>
+                    <div class="checkout__content">
+                        <div class="checkout__left">
+                            <h3 class="checkout__heading">There will be something to choose from ...</h3>
+                            <p class="checkout__text">Please wait, we are updating our site, thanks for your patience.
                             </p>
                         </div>
-                        <div>
-                            <h4>Quality assurance</h4>
-                            <p>
-                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                                extensive
-                                models.
+                    </div>
+                </details>
+                <details>
+                    <summary class="checkout__head">03. SHIPPING INFORMATION</summary>
+                    <div class="checkout__content">
+                        <div class="checkout__left">
+                            <h3 class="checkout__heading">There will be something to choose from ...</h3>
+                            <p class="checkout__text">Please wait, we are updating our site, thanks for your patience.
                             </p>
                         </div>
-
-                    </article>
-
-                </div>
-
-            </section>
-
+                    </div>
+                </details>
+                <details>
+                    <summary class="checkout__head">04. SHIPPING METHOD</summary>
+                    <div class="checkout__content">
+                        <div class="checkout__left">
+                            <h3 class="checkout__heading">There will be something to choose from ...</h3>
+                            <p class="checkout__text">Please wait, we are updating our site, thanks for your patience.
+                            </p>
+                        </div>
+                    </div>
+                </details>
+                <details>
+                    <summary class="checkout__head">05. PAYMENT METHOD</summary>
+                    <div class="checkout__content">
+                        <div class="checkout__left">
+                            <h3 class="checkout__heading">There will be something to choose from ...</h3>
+                            <p class="checkout__text">Please wait, we are updating our site, thanks for your patience.
+                            </p>
+                        </div>
+                    </div>
+                </details>
+                <details>
+                    <summary class="checkout__head">06. ORDER REVIEW</summary>
+                    <div class="checkout__content">
+                        <div class="checkout__left">
+                            <h3 class="checkout__heading">There will be something to choose from ...</h3>
+                            <p class="checkout__text">Please wait, we are updating our site, thanks for your patience.
+                            </p>
+                        </div>
+                    </div>
+                </details>
+            </div>
         </div>
 
         <section class="subscribe">
@@ -954,7 +798,6 @@
         </section>
 
     </footer>
-
 </body>
 
 </html>
