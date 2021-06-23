@@ -9,38 +9,75 @@
 </head>
 <body>
     <script>
-        function add(a, b){
-            return a + b;
-        }
-        function subtract(a, b){
-            return a - b;
-        }
-        function multiply(a, b){
-            return a * b;
-        }
-        function divide(a, b){
-            return a / b;
-        }
+        console.log("(Подсказка) Легче всего проверить ДЗ раскоментировав код разбитый по номерам заданий в файле.\n\n\n")
+        // Задание #1
 
-        function mathOperation(arg1, arg2, operation){
-            switch (operation) {
-                case "+":
-                    return arg1 + " + " + arg2 + " = " + add(arg1, arg2);
-                case "-":
-                    return arg1 + " - " + arg2 + " = " + subtract(arg1, arg2);
-                case "*":
-                    return arg1 + " * " + arg2 + " = " + multiply(arg1, arg2);
-                case "/":
-                    return arg1 + " / " + arg2 + " = " + divide(arg1, arg2);
-                default:
-                    return operation + " - Неизвестная операция!";
+        var x = 2;
+        
+        function isPrime(num){
+            var i = 2;
+            while(i < num /2){
+                if(num % i == 0){
+                    return false;
                 }
+                i++;
+            }
+            return true
         }
 
-        let a = +prompt('Введите число #1'),
-            op = prompt('Введите нужную вам операцию: \n+ - сложить \n- - вычесть \n* - умножить \n/ - разделить'),
-            b = +prompt('Введите число #2');
-                alert(mathOperation(a,b,op));
+        while(x <= 100){
+            if(isPrime(x)){
+                console.log(x)
+            }
+            x++;
+        }
+
+        // Задание #2-3
+
+        // var goods = [
+        //     {
+        //         title: "Товар 1",
+        //         price: 100,
+        //         count: 1
+        //     },
+        //     {
+        //         title: "Товар 2",
+        //         price: 150,
+        //         count: 3
+        //     },
+        //     {
+        //         title: "Товар 3",
+        //         price: 200,
+        //         count: 5
+        //     },
+        // ];
+
+        // function countBasketPrice(masName){
+        //     var sumBasket = 0;
+        //     for(var good of masName){
+        //         sumBasket = sumBasket + (good.price * good.count)
+        //     }
+        //     return sumBasket;
+        // }
+
+        // for(var good of goods){
+        //     console.log(good.title + " стоит " + good.price + ", количество товаров: " + good.count);
+        // }
+        // console.log("Сумма вашей корзины: " + countBasketPrice(goods));
+
+
+        // Задание #4
+
+        // for(var a = 0; a <= 9; console.log(a++)){};
+
+        // Задание #5
+
+        // var a = '';
+
+        // for(var b = 0; b < 20; b++){
+        //     a += "x";
+        //     console.log(a);
+        // }
     </script>
 </body>
 </html>
